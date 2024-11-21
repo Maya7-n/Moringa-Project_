@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .rating-buttons button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: lightgray;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .rating-buttons button:hover {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        #rating-result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rate This Item</h1>
+    <p>Click a button to rate:</p>
+
+    <div class="rating-buttons">
+        <button onclick="rate(1)">1</button>
+        <button onclick="rate(2)">2</button>
+        <button onclick="rate(3)">3</button>
+        <button onclick="rate(4)">4</button>
+        <button onclick="rate(5)">5</button>
+    </div>
+
+    <div id="rating-result">Your rating: None</div>
+
+    <script>
+        function rate(value) {
+            const resultDiv = document.getElementById("rating-result");
+            resultDiv.textContent = `Your rating: ${value}`;
+        }
+    </script>
+</body>
+</html>
